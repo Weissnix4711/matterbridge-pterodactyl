@@ -5,7 +5,7 @@ USER container
 ENV USER=container HOME=/home/container
 WORKDIR /home/container
 
-RUN cp /etc/matterbridge/matterbridge.toml .
+RUN touch matterbridge.toml
 
 COPY ./entrypoint.sh /entrypoint.sh
 CMD [ "/bin/sh", "/entrypoint.sh" ]
